@@ -6,16 +6,16 @@ def detect_anomaly(data):
     std = np.std(data)
     latest = data[-1]
 
-    if latest > mean + 2 * std:
+    if latest > 50:
         return True
     return False
 
 def remediate():
-    print("⚠️ Anomaly detected! Restarting pod...")
-    os.system("echo 'Simulating pod restart...'")
+    print("Anomaly detected! Restarting pod...")
+    os.system("kubectl delete pod -l app=demo")
 
 if __name__ == "__main__":
-    sample_data = [10, 12, 11, 13, 50]
+    sample_data = [10, 12, 11, 13, 200]
 
     if detect_anomaly(sample_data):
         remediate()
