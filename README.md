@@ -26,7 +26,6 @@ Built a cloud-native monitoring and self-healing system using Kubernetes, Promet
 
 ## 📊 Screenshots
 ![alt text](Screenshot/grafana.png)
-![alt text](Screenshot/pod.png)
 
 ## 💡 Use Case
 - Detect abnormal system behavior
